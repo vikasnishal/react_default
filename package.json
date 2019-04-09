@@ -12,8 +12,10 @@
     "test": "jest --silent"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
     "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
@@ -42,7 +44,6 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "babel-cli": "^6.26.0",
     "emotion": "^9.2.12",
     "react": "^16.6.3",
     "react-dom": "^16.4.2",
