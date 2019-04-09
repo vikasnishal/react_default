@@ -9,11 +9,13 @@
     "start": "npm run dev && webpack-dev-server --config ./webpack.config.js --mode development",
     "test:update": "jest --silent -u",
     "test:watch": "jest --silent --watch",
-    "test": "jest --silent"
+    "test": "jest --silent",
+    "storybook": "start-storybook"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
+    "@storybook/react": "^5.0.6",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
