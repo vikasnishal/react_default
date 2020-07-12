@@ -18,7 +18,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
       - name: upgrade package version and publish to github
-        with:
+        env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git status && git diff
