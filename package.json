@@ -1,6 +1,6 @@
 {
   "name": "create_react_default",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "default package for react",
   "main": "index.js",
   "scripts": {},
