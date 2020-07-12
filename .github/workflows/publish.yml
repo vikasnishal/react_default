@@ -3,7 +3,6 @@ name: NPM publish
 on:
   push:
     branches: [npx_publish]
-
 jobs:
   npm_push:
     runs-on: ubuntu-latest
@@ -19,7 +18,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
       - name: upgrade package version and publish to github
-        uses: actions/checkout@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git status && git diff
           npm version patch -m "Release %s"
