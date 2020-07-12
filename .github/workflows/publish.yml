@@ -18,6 +18,12 @@ jobs:
       - run: npm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+      - name: upgrade package version and publish to github
+        run: |
+          git status && git diff
+          npm version patch -m "Release %s"
+          git status && git diff
+          git push
       - name: publish npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
